@@ -4,16 +4,16 @@ function consigne(){
 	case "$1" in
 		1)  echo -e "Vous aurez"
             echo -e "$blue"$consigne"$red" $time"$blue essai(s)$reset_color$bold pour chaque epreuve" 
-		    echo -e "Allez dans le repertoire /tmp/";
+		    echo -e $blue"Allez dans le repertoire /tmp/"$reset_color$bold;
 		    read_input=1
 		    verif=" 1 = 1"
 		;;
-        2) echo -e "Lister le contenu du répertoire ou vous êtes actuellement";
+        2) echo -e $blue"Lister le contenu du répertoire ou vous êtes actuellement"$reset_color$bold;
             bad_response=""
 		    read_input=1
 		    verif=" 1 = 1"
 		;;
-		3) echo -e "Afficher le chemin du repertoire où vous vous trouvez actuellement";
+		3) echo -e $blue"Afficher le chemin du repertoire où vous vous trouvez actuellement"$reset_color$bold;
             bad_response=""
 		    read_input=1
 		    verif=" 1 = 1"
