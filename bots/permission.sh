@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function consigne(){
+	case "$1" in
+		1) echo "... , il vous reste";
+		   verif=" -f /tmp/index.php"
+		;;
+        2) echo "... , il vous reste";
+		   verif=" -f /tmp/index2.php"
+		;;
+        esac
+}
