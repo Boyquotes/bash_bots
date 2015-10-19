@@ -9,7 +9,7 @@ do
 touch /tmp/$i.$media_files
 done
 
-echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser une terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
+echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser un terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
 
 function consigne(){
 	case "$1" in
