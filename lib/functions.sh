@@ -4,6 +4,8 @@
 # apprendre ctrl-a et ctrl-e et flèche du haut pour revenir aux commandes précédentes
 
 function start_test(){
+echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
+
     echo -e "Quel robot lancer ?"
     echo -e "Niveau 1 : "
     echo -e "$green- 1 - Se déplacer et se retrouver ( cd , pwd, ls )"
@@ -19,7 +21,7 @@ function start_test(){
     echo -e "- 7 - Rechercher / Remplacer ( sed )"
     echo -e "- 8 - Les processus ( ps, kill, killall... )"
     echo -e "- 9 - Bash avancé : cut, awk, which, wget, jobs...$reset_color$bold"
-    echo -e "Votre choix :"
+    echo -e $blue"Votre choix :"$reset_color
     read
     case "$REPLY" in
         1) echo -e "Vous avez choisis : Se déplacer et se retrouver\n"
@@ -48,12 +50,12 @@ function ask_challenge(){
         'try')
                 time="5"
                 display_challenge="essai(s)"
-                echo -e "Combien d'essai maximum pour chaque épreuve ? ( 5 essais par défaut )"
+                echo -e $blue"Combien d'essai maximum pour chaque épreuve ? ( 5 essais par défaut )"$reset_color$bold
                 echo -e "1: 2 essais"
                 echo -e "2: 3 essais"
                 echo -e "3: 4 essais"
                 echo -e "4: 10 essais"
-                echo -e "Votre choix ( pour 5 essais taper entrée) :"
+                echo -e $blue"Votre choix ( pour 5 essais taper entrée) :"$reset_color$bold
                 read
                 case "$REPLY" in
                     1)
@@ -77,7 +79,7 @@ function ask_challenge(){
                 echo -e "2: 10 secondes"
                 echo -e "3: 20 secondes"
                 echo -e "4: 40 secondes"
-                echo -e "Votre choix ( pour 30 secondes taper entrée) :"
+                echo -e $blue"Votre choix ( pour 30 secondes taper entrée) :"$reset_color$bold
                 read
                 case "$REPLY" in
                     1)
