@@ -9,9 +9,9 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "Quel robot lancer ?"
     echo -e "Niveau 1 : "
     echo -e "$green- 1 - Se déplacer et se retrouver ( cd , pwd, ls )"
-    echo -e "- 2 - Les fichiers et dossiers ( nano, mkdir, touch )"
-    echo -e "- 3 - Gestion des droits ( chmod , chown )$reset_color$bold"
-    echo -e "$reset_color$grey- 4 - Renommer, déplacer et supprimer ( rename, mv, rm )"
+    echo -e "- 2 - Les fichiers et dossiers ( nano, mkdir, touch )$reset_color$bold"
+    echo -e "- 3 - Gestion des droits ( chmod , chown )"
+    echo -e "- 4 - Renommer, déplacer et supprimer ( rename, mv, rm )"
     echo -e "- 5 - Télécharger des fichiers ( wget, curl )"
 
     echo -e "Niveau 2:"
