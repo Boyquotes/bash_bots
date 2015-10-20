@@ -8,19 +8,19 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
 
     echo -e "Quel robot lancer ?"
     echo -e "Niveau 1 : "
-    echo -e "$green- 1 - Se déplacer et se retrouver ( cd , pwd, ls )"
-    echo -e "- 2 - Les fichiers et dossiers ( nano, mkdir, touch )$reset_color$bold"
-    echo -e "- 3 - Gestion des droits ( chmod , chown )"
-    echo -e "- 4 - Renommer, déplacer et supprimer ( rename, mv, rm )"
-    echo -e "- 5 - Télécharger des fichiers ( wget, curl )"
+    echo -e "$green- 01 - Se déplacer et se retrouver ( cd , pwd, ls )"
+    echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )$reset_color$bold"
+    echo -e "- 03 - Gestion des droits ( chmod , chown )"
+    echo -e "- 04 - Renommer, déplacer et supprimer ( rename, mv, rm )"
+    echo -e "- 05 - Télécharger des fichiers ( wget, curl )"
 
     echo -e "Niveau 2:"
-    echo -e "- 5 - Utilisez l'historique pour gagner du temps ( history, flèches )"
-    echo -e "- 6 - Espace disque et mémoire vive ( df, du, free )"
-    echo -e "- 6 - Filtrer ( grep )"
-    echo -e "- 7 - Rechercher / Remplacer ( sed )"
-    echo -e "- 8 - Les processus ( ps, kill, killall... )"
-    echo -e "- 9 - Bash avancé : cut, awk, which, wget, jobs...$reset_color$bold"
+    echo -e "- 06 - Utilisez l'historique pour gagner du temps ( history, flèches )"
+    echo -e "- 07 - Espace disque et mémoire vive ( df, du, free )"
+    echo -e "- 08 - Filtrer ( grep )"
+    echo -e "- 09 - Rechercher / Remplacer ( sed )"
+    echo -e "- 10 - Les processus ( ps, kill, killall... )"
+    echo -e "- 11 - Bash avancé : cut, awk, which, wget, jobs...$reset_color$bold"
     echo -e $blue"Votre choix :"$reset_color
     read
     case "$REPLY" in
