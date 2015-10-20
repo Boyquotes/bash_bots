@@ -77,8 +77,8 @@ function ask_challenge(){
                 echo -e "Combien de temps voulez vous entre chaque épreuve ? ( 30 secondes par défaut )"
                 echo -e "1: 5 secondes"
                 echo -e "2: 10 secondes"
-                echo -e "3: 20 secondes"
-                echo -e "4: 40 secondes"
+                echo -e "3: 30 secondes"
+                echo -e "4: 60 secondes"
                 echo -e $blue"Votre choix ( pour 30 secondes taper entrée) :"$reset_color$bold
                 read
                 case "$REPLY" in
