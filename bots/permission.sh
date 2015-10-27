@@ -1,12 +1,22 @@
 #!/bin/bash
+rm -f "/tmp/contact.html"
+touch "/tmp/contact.html"
+sudo chown www-data.www-data "/tmp/contact.html"
+
+echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser un terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
 
 function consigne(){
 	case "$1" in
-		1) echo "Changer le proprietaire du fichier .nano_history en root root";
-		   verif=" -f /tmp/index.php"
+	 	1) echo -e $blue"Changer le proprietaire du fichier /tmp/contact.html actuellement en root.root en vous mettant proprietaire de ce fichier$reset_color$bold";
+			verif=" -O /tmp/contact.html"
 		;;
-        2) echo "Donner les droits en ecritures ";
-		   verif=" -f /tmp/index2.php"
+	        2) echo -e $blue"Donner les droits en ecritures "$reset_color$bold;
+            		verif=" 1 = 1"
+            		test="acl"
+		;;
+	        3)
+			verif=""
+			win="true"
 		;;
         esac
 }

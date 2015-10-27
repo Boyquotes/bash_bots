@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 time="30"
 SECS=300
 
@@ -10,7 +9,12 @@ source lib/functions.sh
 echo -e $bold
 
 start_test
-ask_challenge $challenge
+if [ -z $challenge ]
+then
+	echo -e "Il faut configurer la variable challenge pour ce bot"
+else
+	ask_challenge $challenge
+fi
 
 next_step=$[$SECS-$time]
 win=false
@@ -33,7 +37,6 @@ while [[ 0 -ne $SECS ]]; do
             exit
     fi
     
-    
     if [ $verif ]
     then
         if [ $read_input ]
@@ -49,17 +52,31 @@ while [[ 0 -ne $SECS ]]; do
                     response$step
                 else if [ $test ]
                     then
-                    search_grep "$val_test" "$search_in"
-                        if [ -n "$result" ]
-                        then
-                            #next_step
-                            win=true
-                            result=""
-                            val_test=""
-                            search_in=""
-                        else
-                            next_try
-                        fi
+                    case $test in
+		       "search")
+                            search_grep "$val_test" "$search_in"
+                            if [ -n "$result" ]
+                            then
+                                #next_step
+                                win=true
+                                result=""
+                                val_test=""
+                                search_in=""
+                            else
+                                next_try
+                            fi
+			;;
+                    "acl")
+                        droit=`stat -c%A /tmp/contact.html`
+                        val_test=" \"${droit:4:2}\" == \"rw\" "
+			if [ $val_test ]
+			then
+				next_step
+			else
+				next_try
+			fi
+			;;
+			esac
                 else
                     next_step
                 fi

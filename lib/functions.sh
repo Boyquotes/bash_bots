@@ -9,9 +9,9 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "Quel robot lancer ?"
     echo -e "Niveau 1 : "
     echo -e "$green- 01 - Se déplacer et se retrouver ( cd , pwd, ls )"
-    echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )$reset_color$bold"
-    echo -e "- 03 - Gestion des droits ( chmod , chown )"
-    echo -e "- 04 - Renommer, déplacer et supprimer ( rename, mv, rm )"
+    echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )"
+    echo -e "- 03 - Gestion des droits ( chmod , chown )$reset_color$bold"
+    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )"
     echo -e "- 05 - Télécharger des fichiers ( wget, curl )"
 
     echo -e "Niveau 2:"
@@ -33,6 +33,7 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
             source bots/files.sh
         ;;
         3) echo "Vous avez choisis : Gestion des droits sur les fichiers"
+            challenge="time" 
             source bots/permission.sh
         ;;
 #        4) echo "Vous avez choisis : Renommer / Déplacer" 

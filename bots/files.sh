@@ -2,7 +2,6 @@
 
 rm -rf /tmp/myscript.sh rm -rf /tmp/*.ogg touch /tmp/ma_page.php
 
-
 media_files="ogg" 
 for i in {1..10} 
 do
@@ -19,7 +18,7 @@ myscript.sh, Vous avez $time secondes"$reset_color$bold;
 		;;
         2) echo -e $blue"Ecrivez 'Hello command line' dans le fichier myscript.sh"$reset_color$bold;
             verif=" 1 = 1"
-            test=1
+            test="search"
             val_test="hello command line"
             search_in="/tmp/myscript.sh"
 		;;
