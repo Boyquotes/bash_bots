@@ -10,8 +10,8 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "Niveau 1 : "
     echo -e "$green- 01 - Se déplacer et se retrouver ( cd , pwd, ls )"
     echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )"
-    echo -e "- 03 - Gestion des droits ( chmod , chown )$reset_color$bold"
-    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )"
+    echo -e "- 03 - Gestion des droits ( chmod , chown )"
+    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )$reset_color$bold"
     echo -e "- 05 - Télécharger des fichiers ( wget, curl )"
 
     echo -e "Niveau 2:"
@@ -21,7 +21,7 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "- 09 - Rechercher / Remplacer ( sed )"
     echo -e "- 10 - Les processus ( ps, kill, killall... )"
     echo -e "- 11 - Bash avancé : cut, awk, which, wget, jobs...$reset_color$bold"
-    echo -e $blue"Votre choix :"$reset_color
+    echo -e $blue"Votre choix :"$reset_color$bold
     read
     case "$REPLY" in
         1) echo -e "Vous avez choisis : Se déplacer et se retrouver\n"
@@ -36,9 +36,9 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
             challenge="time" 
             source bots/permission.sh
         ;;
-#        4) echo "Vous avez choisis : Renommer / Déplacer" 
-#            source bots/rename.sh
-#        ;;
+        4) echo "Vous avez choisis : Renommer / Déplacer" 
+            source bots/rename.sh
+        ;;
         *)
         echo "Choix pas encore disponible"
         exit
@@ -102,6 +102,10 @@ function ask_challenge(){
         exit
         ;;
     esac
+}
+
+function display_consigne(){
+	echo -e $blue"$1"$reset_color$bold;
 }
 
 function next_step(){
