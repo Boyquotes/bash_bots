@@ -1,26 +1,20 @@
 #!/bin/bash
-time=10
 
-rm -rf /tmp/index_backup.php && rm -rf /tmp/index_copy.php && rm -rf /tmp/*.jpg && rm -rf /tmp/*.JPG
-
-media_files="JPG" 
-for i in {a..k} 
-do
-touch /tmp/$i.$media_files
-done
-
+rm -rf /tmp/site.html
 
 display_warning_new_window
 
 function consigne(){
 	case "$1" in
-		1)    display_consigne "Renommer tous les fichiers /tmp/*.JPG avec l'extension .jpg";
-			force_time=true
-			verif=' -f /tmp/a.jpg -a -f /tmp/b.jpg '
+		1)    display_consigne "Télécharger le fichier à cette url http://localhost et le déposer dans /tmp/site.html ";
+			verif=' -f /tmp/site.html '
+		        test="search"
+        		val_test="<html>"
+		        search_in="/tmp/site.html"
 		;;
-		2)    display_consigne "Copier le fichier /tmp/index.php vers /tmp/index_copy.php";
-			touch /tmp/index.php
-			verif=" -f /tmp/index_copy.php"
+		2)    display_consigne "Aspirer ce site en entier http://localhost et le déposer dans /tmp/site/";
+			verif=" -f /tmp/site/
+#wget -mnp http://localhost/simplon/PHP_MYSQL/"
 		;;
 		3)    display_consigne "Déplacer le fichier /tmp/index.php en index_backup.php";
 			touch /tmp/index.php
@@ -33,4 +27,5 @@ function consigne(){
 			win=true
         esac
 }
+
 

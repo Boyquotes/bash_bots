@@ -11,8 +11,8 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "$green- 01 - Se déplacer et se retrouver ( cd , pwd, ls )"
     echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )"
     echo -e "- 03 - Gestion des droits ( chmod , chown )"
-    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )$reset_color$bold"
-    echo -e "- 05 - Télécharger des fichiers ( wget, curl )"
+    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )"
+    echo -e "- 05 - Télécharger des fichiers ( wget, curl )$reset_color$bold"
 
     echo -e "Niveau 2:"
     echo -e "- 06 - Utilisez l'historique pour gagner du temps ( history, flèches )"
@@ -37,7 +37,12 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
             source bots/permission.sh
         ;;
         4) echo "Vous avez choisis : Renommer / Déplacer" 
+            challenge="force_time" 
             source bots/rename.sh
+        ;;
+        5) echo "Vous avez choisis : Télécharger" 
+            challenge="time" 
+            source bots/download.sh
         ;;
         *)
         echo "Choix pas encore disponible"
@@ -97,6 +102,9 @@ function ask_challenge(){
                     ;;
                 esac
         ;;
+        'force_time')
+        echo "Vous n'avez que $time secondes pour chaque epreuve, bienvenue au niveau 4"
+        ;;
         *)
         echo "Choix pas encore disponible"
         exit
@@ -106,6 +114,9 @@ function ask_challenge(){
 
 function display_consigne(){
 	echo -e $blue"$1"$reset_color$bold;
+}
+function display_warning_new_window(){
+	echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser un terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
 }
 
 function next_step(){

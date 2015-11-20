@@ -36,7 +36,7 @@ while [[ 0 -ne $SECS ]]; do
             echo -e $red"You lose, Game Over$reset_color"
             exit
     fi
-    
+
     if [ $verif ]
     then
         if [ $read_input ]

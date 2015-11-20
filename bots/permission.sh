@@ -3,7 +3,7 @@ rm -f "/tmp/contact.html"
 touch "/tmp/contact.html"
 sudo chown www-data.www-data "/tmp/contact.html"
 
-echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser un terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
+display_warning_new_window
 
 function consigne(){
 	case "$1" in
