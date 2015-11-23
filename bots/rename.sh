@@ -1,5 +1,5 @@
 #!/bin/bash
-time=10
+time=30
 
 rm -rf /tmp/index_backup.php && rm -rf /tmp/index_copy.php && rm -rf /tmp/*.jpg && rm -rf /tmp/*.JPG
 
@@ -26,7 +26,7 @@ function consigne(){
 			touch /tmp/index.php
 			verif=" ! -f /tmp/index.php -a -f /tmp/index_backup.php"
 		;;
-		4)    display_consigne "Supprimer le fichier /tmp/index.php, /tmp/index_copy.php et index_backup.php";
+		4)    display_consigne "Supprimer le fichier /tmp/index_copy.php et index_backup.php";
 			verif=" ! -f /tmp/index.php -a ! -f /tmp/index_backup.php -a ! -f /tmp/index_copy.php"
 		;;
 		5)

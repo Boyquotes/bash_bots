@@ -15,7 +15,7 @@ echo -e $green"HELLO SIMPLONIEN \n"$reset_color$bold
     echo -e "- 05 - Télécharger des fichiers ( wget, curl )$reset_color$bold"
 
     echo -e "Niveau 2:"
-    echo -e "- 06 - Utilisez l'historique pour gagner du temps ( history, flèches )"
+    echo -e "- 06 - Utilisez l'historique pour gagner du temps ( history, flèches haut/bas, point d'exclamation)"
     echo -e "- 07 - Espace disque et mémoire vive ( df, du, free )"
     echo -e "- 08 - Filtrer ( grep )"
     echo -e "- 09 - Rechercher / Remplacer ( sed )"

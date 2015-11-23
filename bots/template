@@ -1,8 +1,10 @@
 #!/bin/bash
 
+display_warning_new_window
+
 function consigne(){
 	case "$1" in
-		1) echo "... , il vous reste";
+		1) echo "Affichez l'historique de vos dernières commandese";
 		   verif=" -f /tmp/index.php"
 		;;
         2) echo "... , il vous reste";
