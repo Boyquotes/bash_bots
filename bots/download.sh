@@ -12,7 +12,7 @@ function consigne(){
         		val_test="<html>"
 		        search_in="/tmp/site.html"
 		;;
-		2)    display_consigne "Aspirer ce site en entier http://localhost et le déposer dans /tmp/site/";
+		2)    display_consigne "Aspirer ce site, seulement la categorie partenaire http://simplon.co/ils-font-simplon-co-avec-nous/ et le déposer dans /tmp/site/";
 			verif=" -f /tmp/site/
 #wget -mnp http://localhost/simplon/PHP_MYSQL/"
 		;;
