@@ -1,10 +1,13 @@
 #!/bin/bash
+source $path/bots/reset.sh
+verif_conf_challenge
+
 time=30
 
 rm -rf /tmp/index_backup.php && rm -rf /tmp/index_copy.php && rm -rf /tmp/*.jpg && rm -rf /tmp/*.JPG
 
-media_files="JPG" 
-for i in {a..k} 
+media_files="JPG"
+for i in {a..k}
 do
 touch /tmp/$i.$media_files
 done
@@ -33,4 +36,3 @@ function consigne(){
 			win=true
         esac
 }
-

@@ -1,4 +1,6 @@
 #!/bin/bash
+source $path/bots/reset.sh
+verif_conf_challenge
 
 rm -rf /tmp/site.html
 
@@ -27,5 +29,3 @@ function consigne(){
 			win=true
         esac
 }
-
-

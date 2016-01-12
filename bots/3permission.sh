@@ -1,4 +1,7 @@
 #!/bin/bash
+source $path/bots/reset.sh
+verif_conf_challenge
+
 rm -f "/tmp/contact.html"
 touch "/tmp/contact.html"
 sudo chown www-data.www-data "/tmp/contact.html"

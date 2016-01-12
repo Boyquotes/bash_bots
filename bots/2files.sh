@@ -1,9 +1,11 @@
 #!/bin/bash
+source $path/bots/reset.sh
+verif_conf_challenge
 
 rm -rf /tmp/myscript.sh rm -rf /tmp/*.ogg touch /tmp/ma_page.php
 
-media_files="ogg" 
-for i in {1..10} 
+media_files="ogg"
+for i in {1..10}
 do
 touch /tmp/$i.$media_files
 done
@@ -12,7 +14,7 @@ echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fe
 
 function consigne(){
 	case "$1" in
-		1) echo -e $blue"Allez dans le repertoire /tmp/ et crée un fichier 
+		1) echo -e $blue"Allez dans le repertoire /tmp/ et crée un fichier
 myscript.sh, Vous avez $time secondes"$reset_color$bold;
 		   verif=" -f /tmp/myscript.sh"
 		;;
