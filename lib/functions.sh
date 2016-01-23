@@ -26,9 +26,9 @@ function go(){
             challenge="force_time"
             source bots/4rename.sh
         ;;
-        5) echo "Vous avez choisis : Télécharger"
+        5) echo "Vous avez choisis : Utilisez l'historique"
             challenge="time"
-            source bots/5download.sh
+            source bots/5history.sh
         ;;
         *)
         echo "Choix pas encore disponible"
