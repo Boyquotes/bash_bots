@@ -43,15 +43,15 @@ function menu(){
     echo -e "$green- 01 - Se déplacer et se retrouver ( cd , pwd, ls )"
     echo -e "- 02 - Les fichiers et dossiers ( nano, mkdir, touch )"
     echo -e "- 03 - Gestion des droits ( chmod , chown )"
-    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )"
-    echo -e "- 05 - Télécharger des fichiers ( wget, curl )$reset_color$bold"
+    echo -e "- 04 - Renommer, copier, déplacer et supprimer ( rename, cp, mv, rm )$reset_color$bold"
+    echo -e "- 05 - Utilisez l'historique pour gagner du temps ( history, flèches haut/bas, point d'exclamation)"
+    echo -e "- 06 - Rechercher dans le contenu des fichiers ou filtrer ( grep )"
 
     echo -e "Niveau 2:"
-    echo -e "- 06 - Utilisez l'historique pour gagner du temps ( history, flèches haut/bas, point d'exclamation)"
     echo -e "- 07 - Espace disque et mémoire vive ( df, du, free )"
-    echo -e "- 08 - Filtrer ( grep )"
-    echo -e "- 09 - Rechercher / Remplacer ( sed )"
-    echo -e "- 10 - Les processus ( ps, kill, killall... )"
+    echo -e "- 08 - Rechercher / Remplacer ( sed )"
+    echo -e "- 09 - Les processus ( ps, kill, killall... )"
+    echo -e "- 10 - Télécharger des fichiers ( wget, curl )"
     echo -e "- 11 - Bash avancé : cut, awk, which, wget, jobs...$reset_color$bold"
     echo -e $blue"Votre choix :"$reset_color$bold
     read
