@@ -6,6 +6,8 @@ source lib/color.sh
 source lib/functions.sh
 
 path=`pwd`
+source $path/bots/reset.sh
+
 level=`cat .level`
 
 echo -e $bold
@@ -22,21 +24,21 @@ consigne $step
 
 while [[ 0 -ne $SECS ]]; do
     if [ $win == true ]
-	    then
-					if [ $level_selected -eq $level ]
-						then
-						level=$[$level_selected+1]
-					fi
+	then
+		if [ $level_selected -eq $level ]
+		then
+			level=$[$level_selected+1]
+		fi
 	        echo -e $green"YOU WIN, TRY THE LEVEL "$level$reset_color
-					echo -e "$level" > $path"/.level"
-					sleep 2
-					menu
+		echo -e "$level" > $path"/.level"
+		sleep 2
+		menu
     fi
 
     if [ $game_over == true ]
-	    then
-	        echo -e $red"You lose, Game Over$reset_color"
-	        exit
+	then
+		echo -e $red"You lose, Game Over$reset_color"
+	exit
     fi
 
     if [ $verif ]
@@ -55,30 +57,30 @@ while [[ 0 -ne $SECS ]]; do
             else if [ $test ]
             	then
                   case $test in
-	       						"search")
-                          search_grep "$val_test" "$search_in"
-                          if [ -n "$result" ]
-                          then
-                              #next_step
-                              win=true
-                              result=""
-                              val_test=""
-                              search_in=""
-                          else
-                              next_try
-                          fi
-										;;
-                    "acl")
-                        droit=`stat -c%A /tmp/contact.html`
-                        val_test=" \"${droit:4:2}\" == \"rw\" "
-												if [ $val_test ]
-												then
-													next_step
-												else
-													next_try
-												fi
-												;;
-										esac
+			"search")
+	                	search_grep "$val_test" "$search_in"
+                          	if [ -n "$result" ]
+                          	then
+                              		#next_step
+	                              	win=true
+                	              	result=""
+        	                      	val_test=""
+                        	      	search_in=""
+                          	else
+                              		next_try
+                          	fi
+			;;
+                    	"acl")
+                        	droit=`stat -c%A /tmp/contact.html`
+                        	val_test=" \"${droit:4:2}\" == \"rw\" "
+				if [ $val_test ]
+				then
+					next_step
+				else
+					next_try
+				fi
+			;;
+		esac
             else
                 next_step
             fi

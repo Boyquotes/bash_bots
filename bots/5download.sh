@@ -2,8 +2,6 @@
 source $path/bots/reset.sh
 verif_conf_challenge
 
-rm -rf /tmp/site.html
-
 display_warning_new_window
 
 function consigne(){

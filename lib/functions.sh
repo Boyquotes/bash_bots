@@ -161,13 +161,13 @@ function next_try(){
     echo "Reste : "$ESSAI $display_challenge
     if [ $WARNING == "10" ]
     then
-	   consigne $step
-     if [ -z $tempo ]
-      then
-        tempo=$(($time-$WARNING))
-      else
-        tempo=$(($tempo-$WARNING))
-      fi
+	consigne $step
+	if [ -z $tempo ]
+     	then
+        	tempo=$(($time-$WARNING))
+     	else
+        	tempo=$(($tempo-$WARNING))
+    	fi
     fi
 }
 
