@@ -62,10 +62,11 @@ while [[ 0 -ne $SECS ]]; do
                           	if [ -n "$result" ]
                           	then
                               		#next_step
-	                              	win=true
+#	                              	win=true
+					test=""
+                        	      	search_in=""
                 	              	result=""
         	                      	val_test=""
-                        	      	search_in=""
                           	else
                               		next_try
                           	fi

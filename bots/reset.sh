@@ -1,8 +1,11 @@
 #!/bin/bash
 step=0
 win=false
+
 test=""
 read_input=""
+val_test=""
+search_in=""
 
 #bot2
 rm -rf /tmp/myscript.sh rm -rf /tmp/*.ogg touch /tmp/ma_page.php
