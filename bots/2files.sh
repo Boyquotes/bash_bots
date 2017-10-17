@@ -8,7 +8,7 @@ do
 touch /tmp/$i.$media_files
 done
 
-echo -e $red"Pour répondre à ces épreuves, il vous faut ouvrir une seconde fenêtre de terminal ou utiliser un terminal qui permet de splitter la fenetre actuelle horizontalement ou verticalement"$reset_color$bold
+display_warning_new_window
 
 function consigne(){
 	case "$1" in
@@ -20,6 +20,7 @@ function consigne(){
             test="search"
             val_test="hello command line"
             search_in="/tmp/myscript.sh"
+	    win="true"
 	;;
         esac
 }
